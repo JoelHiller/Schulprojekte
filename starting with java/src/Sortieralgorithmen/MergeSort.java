@@ -22,7 +22,7 @@ public class MergeSort {
             System.out.println(j);
         }
         final long timeEnd = System.currentTimeMillis();
-        System.out.println("Sortierdauer: " + calculateTime(timeEnd, timeStart));
+        System.out.println("Sortierdauer: " + TimeCalculator.calculateTime(timeEnd, timeStart) + " bei " + length + " Zahlen");
     }
     public static int[] sort(int[] array) {
         int length = array.length;
@@ -69,12 +69,5 @@ public class MergeSort {
         return target;
     }
 
-    public static String calculateTime(long timeA, long timeB){
-        long time = timeA - timeB;
-        long seconds = time/1000;
-        long milliseconds = time%1000;
-        long minutes = seconds/60;
-        seconds = seconds%60;
-        return minutes + " Minuten, " + seconds + " Sekunden, " + milliseconds + " Millisekunden";
-    }
+
 }
